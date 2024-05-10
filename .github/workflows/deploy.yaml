@@ -45,7 +45,7 @@ jobs:
           SAVE_ACCOUNT_INTERVAL
           RESET_ACCOUNT_INTERVAL
       env:
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        SECRET_KEY: ${{ secrets.SECRET_KEY || 10000 }}
         LOSS_THRESHOLD: ${{ vars.LOSS_THRESHOLD || 10 }}
         DELAY_THRESHOLD: ${{ vars.DELAY_THRESHOLD || 500 }}
         RANDOM_COUNT: ${{ vars.RANDOM_COUNT || 10 }}
